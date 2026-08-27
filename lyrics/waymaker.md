@@ -46,7 +46,7 @@ You are here, mending every heart
 I worship You
 I worship You
 
-## Bridge (x4)
+## Bridge
 
 Even when I don't see it, You're working
 Even when I don't feel it, You're working
