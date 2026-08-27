@@ -57,7 +57,7 @@ h1 {
   letter-spacing: 0.02em;
   color: #c8a564;
 
-  background-image: url("/logo.png");
+  background-image: url("../logo.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: auto 1.15em; /* height tracks the title */
