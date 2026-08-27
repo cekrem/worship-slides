@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if command -v bunx >/dev/null 2>&1; then
+  alias runner=bunx
+elif command -v npx >/dev/null 2>&1; then
+  alias runner=npx
+else
+  echo "Error: you need either $(bunx) or $(npx) in your PATH to run this!" >&2
+  exit 1
+fi
+
+echo "# Sanger\n" >index.md
+ls lyrics/*.md | sed 's|lyrics/\(.*\)\.md|[\1](lyrics/\1.md)|' >>index.md
+
+runner @marp-team/marp-cli@latest ./ -s
