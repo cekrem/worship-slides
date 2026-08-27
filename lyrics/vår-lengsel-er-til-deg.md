@@ -14,9 +14,10 @@ Så spør vi om kun én ting:
 
 ## Pre-chorus
 
-Mer, mer, mer, mer.  
-Mer, mer, mer, mer.
+Mer, mer, mer, mer
+Mer, mer, mer, mer
 
 ## Ref
 
-Øs ut, øs ut, øs ut din Ånd over oss!
+Øs ut, øs ut,
+øs ut din Ånd over oss!

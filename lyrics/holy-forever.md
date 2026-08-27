@@ -3,7 +3,8 @@
 ## Verse 1
 
 A thousand generations falling down in worship  
-To sing the song of ages to the Lamb  
+To sing the song of ages to the Lamb
+
 And all who've gone before us, and all who will believe  
 Will sing the song of ages to the Lamb
 
@@ -11,7 +12,8 @@ Will sing the song of ages to the Lamb
 
 Your name is the highest  
 Your name is the greatest  
-Your name stands above them all  
+Your name stands above them all
+
 All thrones and dominions  
 All powers and positions  
 Your name stands above them all
@@ -21,7 +23,8 @@ Your name stands above them all
 And the angels cry, "Holy"  
 All Creation cries, "Holy"  
 You are lifted high, holy  
-Holy forever  
+Holy forever
+
 Hear Your people sing, "Holy"  
 To the King of kings, holy  
 You will always be holy  
