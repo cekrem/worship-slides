@@ -11,12 +11,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-
-      - uses: actions/checkout@v2
-        with:
-          submodules: false
-          fetch-depth:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
 
       - name: build html!
         run: ./build
