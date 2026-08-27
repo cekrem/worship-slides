@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "# Sanger\n" >index.md
+ls lyrics/*.md | sed 's|lyrics/\(.*\)\.md|[\1](lyrics/\1.md)|' >>index.md
+
+if command -v bunx >/dev/null 2>&1; then
+  bunx @marp-team/marp-cli@latest ./ -s
+elif command -v npx >/dev/null 2>&1; then
+  npx @marp-team/marp-cli@latest ./ -s
+else
+  echo "Error: you need either $(bunx) or $(npx) in your PATH to run this!" >&2
+  exit 1
+fi
