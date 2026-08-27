@@ -32,6 +32,12 @@ section:has(> h2:nth-of-type(7)) {
   font-size: 20px;
 }
 
+/* indexing stuff */
+p:has(a) {
+  column-count: 2;
+  font-size: 24px;
+}
+
 /* ---- Columns may only break before an h2 ----
    Anything that isn't an h2 refuses a break before it, so the only
    legal break points left are the section boundaries. */
