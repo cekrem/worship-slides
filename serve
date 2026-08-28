@@ -9,8 +9,6 @@ else
   exit 1
 fi
 
-echo "---\npaginate: true\n---" >index.md
-echo "# Sanger\n" >>index.md
-ls lyrics/*.md | sed 's|lyrics/\(.*\)\.md|[\1](lyrics/\1.md)|' >>index.md
+./create-index
 
 runner @marp-team/marp-cli@latest ./ -s

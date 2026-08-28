@@ -9,7 +9,6 @@ else
   exit 1
 fi
 
-echo "# Sanger\n" >index.md
-ls lyrics/*.md | sed 's|lyrics/\(.*\)\.md|[\1](lyrics/\1.html)|' >>index.md
+./create-index
 
 runner @marp-team/marp-cli@latest ./ --html
