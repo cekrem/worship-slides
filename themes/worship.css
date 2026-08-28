@@ -43,13 +43,16 @@ p:has(a) {
    legal break points left are the section boundaries. */
 section > * + *:not(h2) {
   break-before: avoid;
+  page-break-before: avoid;
 }
 h2 {
   break-after: avoid;
+  page-break-after: avoid;
 }
 p,
 blockquote {
   break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 h1 {
@@ -58,12 +61,12 @@ h1 {
   padding-bottom: 0.25em;
   padding-right: 4.5em; /* keeps long titles off the logo */
   border-bottom: 1px solid rgba(200, 165, 100, 0.32);
-  font-size: 0.62em;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #c8a564;
 
-  background-image: url("../logo.png");
+  background-image: url("https://cekrem.github.io/worship-slides/logo.png"); /* not ideal, but works local/prod */
   background-repeat: no-repeat;
   background-position: right top;
   background-size: auto 1.15em; /* height tracks the title */
