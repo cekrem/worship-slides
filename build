@@ -9,6 +9,6 @@ else
   exit 1
 fi
 
-./create-index html
+./create-deck
 
-runner @marp-team/marp-cli@latest ./ --html
+runner @marp-team/marp-cli@latest index.md --html
