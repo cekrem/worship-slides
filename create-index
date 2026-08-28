@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# link target extension: md for `serve` (marp serves the sources),
+# html for `build` (marp writes .html next to each source)
+ext="${1:-md}"
+
+printf '%s\n' '---' 'paginate: true' '---' >index.md
+printf '%s\n\n' '# Sanger' >>index.md
+
+for file in lyrics/*.md; do
+  name=$(basename "$file" .md)
+  display=$(printf '%s' "$name" | sed 's/-/ /g')
+  printf '[%s](lyrics/%s.%s)\n' "$display" "$name" "$ext"
+done | sort >>index.md

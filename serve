@@ -9,9 +9,6 @@ else
   exit 1
 fi
 
-# Regenerate the deck when a song changes, so marp's live reload picks it up.
-./create-deck
-while sleep 1; do ./create-deck; done &
-trap 'kill $!' EXIT INT TERM
+./create-index
 
 runner @marp-team/marp-cli@latest ./ -s
