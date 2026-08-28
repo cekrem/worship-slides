@@ -1,0 +1,10 @@
+#!/bin/sh
+
+printf '%s\n' '---' 'paginate: true' '---' >index.md
+printf '%s\n\n' '# Sanger' >>index.md
+
+for file in lyrics/*.md; do
+  name=$(basename "$file" .md)
+  display=$(printf '%s' "$name" | sed 's/-/ /g')
+  printf '[%s](%s)\n' "$display" "$file"
+done | sort >>index.md
