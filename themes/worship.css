@@ -18,6 +18,10 @@ section {
   column-fill: balance;
 }
 
+section:after {
+  display: none;
+}
+
 /* Size by section count. h2:nth-of-type(3) means "has a third h2". */
 section:has(> h2:nth-of-type(3)) {
   column-count: 2;
