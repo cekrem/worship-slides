@@ -1,0 +1,15 @@
+# I Love You Lord
+
+## Verse 1
+
+I love you, Lord  
+And I lift my voice  
+To worship You  
+Oh, my soul, rejoice!
+
+## Verse 2
+
+Take joy my King  
+In what You hear  
+Let it be a sweet, sweet sound  
+In Your ear

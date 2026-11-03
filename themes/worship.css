@@ -36,10 +36,40 @@ section:has(> h2:nth-of-type(7)) {
   font-size: 20px;
 }
 
-/* indexing stuff */
+/* ---- Index slide ----
+   The song list outgrew one 720px slide, so it scrolls inside the slide.
+   Marp's wheel handler walks up from the event target and skips slide
+   navigation once it finds a scrollable ancestor, so overflow-y is enough.
+
+   A grid rather than CSS columns: with `column-count` the list fills
+   column 1 top-to-bottom first, so scrolling down would run past the end of
+   it and you'd have to scroll back up for column 2. Grid rows flow
+   left-to-right, so scrolling down always moves forward alphabetically. */
+section:has(> p a) {
+  /* The base `section` rule above sets column-count, which makes every slide
+     a multi-column container. At a fixed 720px height that fragments
+     overflow sideways into new columns, so scrollHeight never exceeds
+     clientHeight and there is nothing to scroll. Dropping back to `auto`
+     makes this slide a plain block box that overflows downward. */
+  column-count: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain; /* don't chain the scroll to the deck */
+}
+
 p:has(a) {
-  column-count: 2;
-  font-size: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  align-content: start;
+  gap: 0.1em 1.8em;
+  padding-left: 0; /* align the list with the h1 rule above it */
+  /* 20px keeps three columns while leaving nearly every title on one line;
+     at 24px a dozen titles wrapped and left ragged gaps between rows. */
+  font-size: 20px;
+}
+
+/* markdown-it joins the links with <br>; the grid supplies the breaks */
+p:has(a) br {
+  display: none;
 }
 
 /* ---- Columns may only break before an h2 ----
